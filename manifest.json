@@ -1,0 +1,39 @@
+{
+  "name": "Ad Blocker",
+  "version": "1.0.0",
+  "description": "Ad Blocker",
+  "permissions": [
+    "cookies",
+    "declarativeContent",
+    "storage"
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.olevod.com/*",
+        "http://*.olevod.com/*"
+      ],
+      "js": [
+        "javascripts/blocker.js"
+      ]
+    }
+  ],
+  "page_action": {
+    "default_icon": {
+      "16": "images/brain_cache16.png",
+      "32": "images/brain_cache32.png",
+      "48": "images/brain_cache48.png",
+      "128": "images/brain_cache128.png"
+    }
+  },
+  "icons": {
+    "16": "images/brain_cache16.png",
+    "32": "images/brain_cache32.png",
+    "48": "images/brain_cache48.png",
+    "128": "images/brain_cache128.png"
+  },
+  "manifest_version": 2
+}
